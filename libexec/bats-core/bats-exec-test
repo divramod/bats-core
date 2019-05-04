@@ -300,7 +300,7 @@ bats_exit_trap() {
     status=0
   fi
 
-  $(rm -f "$BATS_OUT" || true)
+  rm -f "$BATS_OUT" 2>&1 || true
   exit "$status"
 }
 
